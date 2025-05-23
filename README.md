@@ -27,8 +27,16 @@ conda create --name iga-inr --file requirements.txt
 ```
 ---
 ## 🚀 Getting Started
-### Simple Function Approximation
-To produce the experiment 1 of Section 4 of our paper, please:
+### Practical Implementation method
+
+### 📉 Simple Function Approximation
+This section reproduces the experiments in **Section 4** of our paper.
+
+📊 Experiment 1: NTK-based adjustments VS. eNTK-based adjustments
+
+This experiment investigates the difference between NTK-based adjustments and eNTK-based adjustments.
+
+To study how width affects approximation, run the following scripts:
 ```bash
 cd simple_function_approximation/experiment1
 sh train_1024.sh
@@ -37,9 +45,55 @@ sh train_4096.sh
 sh train_8192.sh
 ```
 
-To produce the experiment 2 of Section 4 of our paper, please:
+⚙️ Experiment 2: Validation of NTK-based Adjustments and IGA in General Settings
+
+In this experiment, we aim to validate the effectiveness of the eNTK-based adjustment and IGA to overcome spectral bias in more general settings.
+
 ```bash
 cd simple_function_approximation/experiment2
-sh train_relu.sh
-sh train_siren.sh
+sh train_relu.sh # Using ReLU activation
+sh train_siren.sh # Using Sine activation
 ```
+
+### 🖼️ 2D Color Image Approximation
+In the 2D image fitting experiments, we provide training scripts corresponding to the activation functions discussed in the main paper. To reproduce the results, please follow the steps below:
+
+```bash
+cd image_fitting
+sh train_relu.sh # Using ReLU activation
+sh train_relu_pe.sh # Using ReLU activation with Positional Encoding
+sh train_siren.sh # Using Sine activation
+sh train_finer.sh # Using Finer activation
+```
+
+Upon completion, the results will be automatically stored in the “results/” directory. The file “frequency_domain_of_2D_image.ipynb” contains the code for the spectral analysis and visualization as presented in the main text.
+Run the following file to calculate the remaining quantitative metrics.
+
+```bash
+python lpips_ssim.py
+```
+
+### 🗿 3D Shape Representation
+
+In the 3D shape representation, we provide pre-processed 3D data files along with training scripts. To reproduce the results shown in the paper, please follow the steps below:
+
+```bash
+cd occupance_fitting
+sh train_relu.sh # Using ReLU activation
+sh train_pe.sh # Using ReLU activation with Positional Encoding
+sh train_sin.sh # Using Sine activation
+```
+
+### 📸 5D Neural Radiance Fields
+
+The neural radiance field (NeRF) experiment code is based on [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch). We made modifications on top of this implementation to suit our experimental needs. To reproduce the results shown in the paper, please follow the steps below:
+
+```bash
+cd nerf-pytorch-master
+sh train.sh
+```
+
+---
+## 📄 Citation
+
+
