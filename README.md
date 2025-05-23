@@ -63,7 +63,7 @@ cd simple_function_approximation/experiment2
 sh train_relu.sh # Using ReLU activation
 sh train_siren.sh # Using Sine activation
 ```
-> <img  src="figures/exp_1_2_line_paper.jpeg">
+> <img  src="figures/exp_1_2_line_paper.jpg">
 
 ### 🖼️ 2D Color Image Approximation
 In the 2D image fitting experiments, we provide training scripts corresponding to the activation functions discussed in the main paper. To reproduce the results, please follow the steps below:
@@ -82,7 +82,7 @@ Run the following file to calculate the remaining quantitative metrics.
 ```bash
 python lpips_ssim.py
 ```
-> <img  src="figures/exp_2_1_icml.jpg">
+> <img  src="figures/exp_2_1_icml.jpeg">
 
 ### 🗿 3D Shape Representation
 
