@@ -25,6 +25,21 @@ cd IGA-INR
 conda create --name iga-inr --file requirements.txt
 
 ```
-
 ---
 ## 🚀 Getting Started
+### Simple Function Approximation
+To produce the experiment 1 of Section 4 of our paper, please:
+```bash
+cd simple_function_approximation/experiment1
+sh train_1024.sh
+sh train_2048.sh
+sh train_4096.sh
+sh train_8192.sh
+```
+
+To produce the experiment 2 of Section 4 of our paper, please:
+```bash
+cd simple_function_approximation/experiment2
+sh train_relu.sh
+sh train_siren.sh
+```
