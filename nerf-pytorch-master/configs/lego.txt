@@ -1,0 +1,27 @@
+expname = blender_paper_lego_loss_4096_iga_25_0_25_sigmoid_time
+basedir = ./logs
+datadir = ./data/nerf_synthetic/lego
+dataset_type = blender
+
+no_batching = True
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 200
+
+N_samples = 64
+N_importance = 128
+N_rand = 1024
+
+gradient_adjust=False
+xuhao=5
+replace_start=0
+replace_end=5
+N_iters=200000
+i_print=5000
+
+precrop_iters = 0
+precrop_frac = 0.5
+
+half_res = True
+

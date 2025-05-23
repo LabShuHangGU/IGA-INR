@@ -1,0 +1,25 @@
+expname = blender_paper_ficus_loss_random_0_fr_256_16_0.05
+basedir = ./logs
+datadir = ./data/nerf_synthetic/ficus
+dataset_type = blender
+
+no_batching = True
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 600
+
+N_samples = 64
+N_importance = 128
+N_rand = 1024
+pNTK_if=False
+
+xuhao=20
+replace_start=0
+replace_end=20
+N_iters=500000
+
+precrop_iters = 500  #为什么要pre crop 论文里面似乎没有提到
+precrop_frac = 0.5
+
+half_res = False

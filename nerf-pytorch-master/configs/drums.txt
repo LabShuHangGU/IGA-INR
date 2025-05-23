@@ -1,0 +1,26 @@
+expname = blender_paper_drums_loss_4096_half_res_decay_250k_fr_64_16_0.005
+basedir = ./logs
+datadir = ./data/nerf_synthetic/drums
+dataset_type = blender
+
+no_batching = True
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 250
+
+N_samples = 64
+N_importance = 128
+N_rand = 1024
+pNTK_if=False
+pa=False
+
+xuhao=25
+replace_start=0
+replace_end=25
+N_iters=250000
+
+precrop_iters = 500  #为什么要pre crop 论文里面似乎没有提到
+precrop_frac = 0.5
+
+half_res = True
