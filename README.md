@@ -52,7 +52,7 @@ sh train_2048.sh
 sh train_4096.sh
 sh train_8192.sh
 ```
-> <img  src="figures/Koda_5.png">
+> <img  src="figures/exp1_1_paper_large_colorbar.jpeg">
 
 ⚙️ Experiment 2: Validation of NTK-based Adjustments and IGA in General Settings
 
@@ -63,6 +63,7 @@ cd simple_function_approximation/experiment2
 sh train_relu.sh # Using ReLU activation
 sh train_siren.sh # Using Sine activation
 ```
+> <img  src="figures/exp_1_2_line_paper.jpeg">
 
 ### 🖼️ 2D Color Image Approximation
 In the 2D image fitting experiments, we provide training scripts corresponding to the activation functions discussed in the main paper. To reproduce the results, please follow the steps below:
@@ -81,6 +82,7 @@ Run the following file to calculate the remaining quantitative metrics.
 ```bash
 python lpips_ssim.py
 ```
+> <img  src="figures/exp_2_1_icml.jpeg">
 
 ### 🗿 3D Shape Representation
 
@@ -92,6 +94,7 @@ sh train_relu.sh # Using ReLU activation
 sh train_pe.sh # Using ReLU activation with Positional Encoding
 sh train_sin.sh # Using Sine activation
 ```
+> <img  src="figures/exp_3_1_icml.jpeg">
 
 ### 📸 5D Neural Radiance Fields
 
