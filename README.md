@@ -52,7 +52,7 @@ sh train_2048.sh
 sh train_4096.sh
 sh train_8192.sh
 ```
-> <img  src="figures/exp1_1_paper_large_colorbar.jpeg">
+> <img  src="figures/exp1_1_paper_large_colorbar.jpg">
 
 ⚙️ Experiment 2: Validation of NTK-based Adjustments and IGA in General Settings
 
@@ -82,7 +82,7 @@ Run the following file to calculate the remaining quantitative metrics.
 ```bash
 python lpips_ssim.py
 ```
-> <img  src="figures/exp_2_1_icml.jpeg">
+> <img  src="figures/exp_2_1_icml.jpg">
 
 ### 🗿 3D Shape Representation
 
