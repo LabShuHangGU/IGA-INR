@@ -27,8 +27,16 @@ conda create --name iga-inr --file requirements.txt
 ```
 ---
 ## 🚀 Getting Started
-### Practical Implementation method
+### 🧠➡️💻 Practical Implementation method
 
+In theory, our method modifies the gradient update by inserting a transformation matrix \( S \) as follows:  
+$\nabla_{\theta} f(x, \theta)^\top r_t \quad \Rightarrow \quad \nabla_{\theta} f(x, \theta)^\top S r_t$, where $r_t=f(x-\theta)-y$.
+
+However, directly modifying the gradient in this form is not the most optimal implementation due to potential numerical precision discrepancies. In practice, we apply the transformation matrix directly to the loss function. The modified loss $\mathcal{L}'$ is defined as:
+
+$\mathcal{L}=\frac{1}{N}\sum_{i=1}^N (f(x_i,\theta)-y_i)^2 \Rightarrow \mathcal{L}'=\frac{2}{N}f(x,\theta)^TSr$.
+
+This allows our method to be seamlessly integrated into existing training pipelines with minimal changes to the codebase. 
 ### 📉 Simple Function Approximation
 This section reproduces the experiments in **Section 4** of our paper.
 
@@ -44,6 +52,7 @@ sh train_2048.sh
 sh train_4096.sh
 sh train_8192.sh
 ```
+> <img  src="figures/Koda_5.png">
 
 ⚙️ Experiment 2: Validation of NTK-based Adjustments and IGA in General Settings
 
@@ -96,4 +105,16 @@ sh train.sh
 ---
 ## 📄 Citation
 
+If you find this work useful, please consider citing:
 
+```bibtex
+@misc{shi2024inductivegradientadjustmentspectral,
+      title={Inductive Gradient Adjustment For Spectral Bias In Implicit Neural Representations}, 
+      author={Kexuan Shi and Hai Chen and Leheng Zhang and Shuhang Gu},
+      year={2024},
+      eprint={2410.13271},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.13271}, 
+}
+```
