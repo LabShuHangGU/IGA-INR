@@ -1,7 +1,7 @@
 # 🧠 Inductive Gradient Adjustment (IGA)  
 *A theory-grounded gradient adjustment method for improving spectral bias in implicit neural representations (INRs).*
 
-## 🎥 High-Frequency Recovery with IGA vs. FR vs. Baselines
+## 🎥 Training dynamics with IGA vs. FR vs. Baselines
 ![IGA-INR demo](figures/visualization.gif)
 
 ## 🔍 Overview
